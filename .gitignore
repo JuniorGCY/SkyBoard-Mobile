@@ -42,3 +42,6 @@ yarn-error.*
 
 #temporario
 /Changelog.md
+
+#Google
+/google-services.json
