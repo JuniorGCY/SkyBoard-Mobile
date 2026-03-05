@@ -30,7 +30,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/SkyBoard.git](https://github.com/seu-usuario/SkyBoard.git)
+   git clone [https://github.com/JuniorGCY/SkyBoard-Mobile.git](https://github.com/JuniorGCY/SkyBoard-Mobile.git)
 
 2. **Instale as dependências:**
    npm install
@@ -100,7 +100,7 @@ To run the project locally, follow the steps below:
 
 ``bash
 
-git clone [https://github.com/your-username/SkyBoard.git](https://github.com/your-username/SkyBoard.git)
+git clone [https://github.com/JuniorGCY/SkyBoard-Mobile.git](https://github.com/JuniorGCY/SkyBoard-Mobile.git)
 
 2. **Install the dependencies:**
 
