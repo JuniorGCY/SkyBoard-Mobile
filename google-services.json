@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "544127242723",
+    "project_id": "skyboard-c2521",
+    "storage_bucket": "skyboard-c2521.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544127242723:android:78bf7180e9575d876e90d6",
+        "android_client_info": {
+          "package_name": "com.yashimayu.SkyBoard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544127242723-mhhl3c1mt1i5nk11lj7b4c00r1s0n9ub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yashimayu.SkyBoard",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "544127242723-s8aqvqdflke54delhe2gdofeb04heb47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxCYzU70CaWUxlLsRwCDmKOkUIWOrDiho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544127242723-s8aqvqdflke54delhe2gdofeb04heb47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
