@@ -43,5 +43,8 @@ yarn-error.*
 #temporario
 /Changelog.md
 
-#Google
-/google-services.json
+# Firebase (Android & iOS)
+google-services.json
+GoogleService-Info.plist
+android/app/google-services.json
+ios/GoogleService-Info.plist
