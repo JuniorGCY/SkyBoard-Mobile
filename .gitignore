@@ -40,9 +40,6 @@ yarn-error.*
 /ios
 /android
 
-#temporario
-/Changelog.md
-
 # Firebase (Android & iOS)
 google-services.json
 GoogleService-Info.plist

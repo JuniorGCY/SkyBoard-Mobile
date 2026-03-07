@@ -24,7 +24,7 @@ export default function AuthScreen() {
     return (
         <View style={styles.container}>
             <ImageBackground 
-               source={require('../../assets/AuthImage/Moon_Wallpaper.jpg')}
+               source={require('../../assets/images/AuthImage/Moon_Wallpaper.jpg')}
                resizeMode="cover"
                style={styles.imageContainer}
             >
@@ -40,7 +40,7 @@ export default function AuthScreen() {
 
                     <TouchableOpacity style={styles.buttonAuth} onPress={() => handleGoogleLogin()}>
                         <Image 
-                           source={require('../../assets/AuthImage/google-icon.png')}
+                           source={require('../../assets/images/AuthImage/google-icon.png')}
                            style={styles.googleIcon}
                         />
                         <Text style={styles.buttonText}>Continuar com o Google</Text>
@@ -48,7 +48,7 @@ export default function AuthScreen() {
 
                     <TouchableOpacity style={styles.buttonAuth}>
                         <Image 
-                           source={require('../../assets/AuthImage/apple-icon-png.png')}
+                           source={require('../../assets/images/AuthImage/apple-icon-png.png')}
                            style={styles.googleIcon}
                         />
                         <Text style={styles.buttonText}>Em breve...</Text>

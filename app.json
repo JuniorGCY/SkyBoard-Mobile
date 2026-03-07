@@ -5,11 +5,11 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic", 
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0B0E14" 
+      "backgroundColor": "#0B0E14"
     },
     "ios": {
       "supportsTablet": true,
@@ -18,14 +18,15 @@
     },
     "android": {
       "package": "com.yashimayu.SkyBoard",
-      "googleServicesFile": "./google-services.json" 
+      "googleServicesFile": "./google-services.json"
     },
     "plugins": [
       "@react-native-firebase/app",
       "@react-native-firebase/auth",
       [
         "@react-native-google-signin/google-signin"
-      ]
+      ],
+      "expo-image"
     ]
   }
 }

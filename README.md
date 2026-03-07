@@ -3,6 +3,17 @@
 pt:
 **SkyBoard** é um aplicativo mobile em desenvolvimento para amantes da astronomia e astrofotografia. O objetivo é fornecer ferramentas precisas para observação do céu, monitoramento de eventos astronômicos e gerenciamento de sessões de captura.
 
+Objetivo:
+O SkyBoard nasceu de uma necessidade pessoal: a frustração de ter que usar múltiplos aplicativos para cobrir todas as necessidades de um astrônomo amador. Desenvolvi este projeto para ser o hub definitivo para entusiastas do espaço. Com ele, você não precisa mais pular de app em app. O SkyBoard centraliza:
+
+**Observação e Eventos**: Saiba exatamente o que está acontecendo no céu e não perca nenhum fenômeno.
+
+**ISS Tracking e Satélites**: Acompanhe a órbita e a passagem da Estação Espacial e outros satélites de forma unificada.
+
+**Comunidade**: Um espaço dedicado para compartilhar astrofotografias, trocar dicas e interagir com outros amantes da astronomia.
+
+**Guia de Equipamentos**: Recomendações e curadoria das melhores marcas de telescópios em lojas confiáveis.
+
 ## 🚀 Funcionalidades Planejadas
 1\. **Dashboard de Eventos**: Calendário dinâmico com notificações de eclipses, conjunções e chuvas de meteoros.
 
@@ -55,16 +66,66 @@ Para acompanhar a evolução do SkyBoard e entender o processo criativo, você p
   <img src="./assets/trello.png" alt="Quadro do Trello SkyBoard" width="100%">
 </details>
 
+<details>
+  <summary>📸 Clique para ver o design inicial do app no React Native</summary>
+  <br />
+  <img src="./assets/home.png" alt="Print da tela home no emulador tela pequena" width="100%">
+  <br />
+  <img src="./assets/home2.png" alt="Print da tela home no emulador tela grande" width="100%">
+</details>
+
+🗺️ Roadmap de Desenvolvimento
+
+**Fase 1**: MVP Útil
+
+**Foco**: Entregar valor imediato com o menor esforço de backend.
+**Telas**: Tela Auth, Home e ISS Tracker.
+**Meta**: O usuário abre o app, faz registro ou login, e então e poderá saber quando ver a \*\*ISS\*\* no céu.
+
+**Fase 2**: Planetas e Eventos
+
+**Foco**: Mostrar quandos eventos astronômicos como: Planetas, chuvas de meteoros, eclipse e muito mais, serão visiveis.
+**Telas**: Observar.
+**Meta**: O usuário poderá descobrir os principais eventos e marcar na sua tela Home, o seu favorito.
+
+**Fase 3**: Social e Engajamento
+
+**Foco**: Retenção de usuários.
+**Telas**: Aba de Comunidade e Perfil de Usuário.
+**Lógica**: Autenticação (Google/Facebook) e Supabase para armazenamento de imagens.
+**Social**: Deep linking para Instagram e TikTok.
+
+**Fase 4**: Inteligência e Monetização
+
+**Foco**: Transformar o app em uma ferramenta técnica.
+**Telas**: Implementação do \*\*Índice de Seeing\*\* e a \*\*Aba de Compras\*\*.
+**Meta**: Ajudar o usuário quais as melhores condições de observação e ajudar na escolha do Telescópio.
+
 
 🛡️ Direitos Autorais
 Este projeto é de uso pessoal e faz parte do meu portfólio de desenvolvimento mobile.
 Todos os direitos reservados. A visualização do código é permitida para fins de aprendizado e avaliação técnica, mas a reprodução, modificação ou redistribuição de partes ou do todo não está autorizada sem permissão prévia.
+
+Beta em breve!
 
 
 
 
 EN:
 **SkyBoard** It is a mobile application under development for astronomy and astrophotography enthusiasts. The goal is to provide precise tools for observing the sky, monitoring astronomical events, and managing capture sessions.
+
+Objective:
+
+SkyBoard was born out of a personal need: the frustration of having to use multiple apps to cover all the needs of an amateur astronomer. I developed this project to be the ultimate hub for space enthusiasts. With it, you no longer need to jump from app to app. SkyBoard centralizes:
+
+**Observation and Events**: Know exactly what's happening in the sky and don't miss any phenomena.
+
+**ISS Tracking and Satellites**: Track the orbit and passage of the Space Station and other satellites in a unified way.
+
+**Community**: A dedicated space to share astrophotographs, exchange tips, and interact with other astronomy lovers.
+
+**Equipment Guide**: Recommendations and curation of the best telescope brands in reliable stores.
+
 
 ## 🚀 Planned Features
 
@@ -127,9 +188,48 @@ To follow the evolution of SkyBoard and understand the creative process, you can
   <img src="./assets/trello.png" alt="Quadro do Trello SkyBoard" width="100%">
 </details>
 
+<details>
+  <summary>📸 Click to see the initial app design in React Native</summary>
+  <br />
+  <img src="./assets/home.png" alt="Screenshot of the home screen on the small screen emulator" width="100%">
+  <br />
+  <img src="./assets/home2.png" alt="Screenshot of the home screen on the emulator large screen" width="100%">
+</details>
+
+
+🗺️ Development Roadmap
+
+**Phase 1**: Useful MVP
+
+**Focus**: Deliver immediate value with minimal backend effort.
+**Screens**: Auth screen, Home screen, and ISS Tracker.
+**Goal**: The user opens the app, registers or logs in, and then can see when the ISS is visible in the sky.
+
+**Phase 2**: Planets and Events
+
+**Focus**: Show when astronomical events such as planets, meteor showers, eclipses, and more will be visible.
+**Screens**: Observe.
+**Goal**: The user can discover the main events and mark their favorite on their Home screen.
+
+**Phase 3**: Social and Engagement
+
+**Focus**: User retention.
+**Screens**: Community tab and User Profile.
+**Logic**: Authentication (Google/Facebook) and Subbase for image storage.
+**Social**: Deep linking to Instagram and TikTok.
+
+**Phase 4**: Intelligence and Monetization
+
+**Focus**: Transforming the app into a technical tool.
+**Screens**: Implementation of the *Seeing Index* and the *Purchases Tab*.
+**Goal**: Helping the user determine the best viewing conditions and assisting in telescope selection.
+
+
+
 
 🛡️ Copyright Notice
 This project is for personal use and is part of my mobile development portfolio.
 
 All rights reserved. Viewing the code is permitted for learning and technical evaluation purposes, but reproduction, modification, or redistribution of parts or the whole is not authorized without prior permission.
 
+Beta coming soon!
