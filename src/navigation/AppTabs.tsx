@@ -1,22 +1,21 @@
 import {View, StyleSheet} from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import WatchScreen from "../screens/App/WatchScreen"
-import CommunityScreen from "../screens/App/CommunityScreen"
-import HomeScreen from "../screens/App/HomeScreen"
-import IssTrackingScreen from "../screens/App/IssTrackingScreen"
-import SuggestionsScreen from "../screens/App/SuggestionsScreen"
+import WatchScreen from "../features/watch/WatchScreen"
+import CommunityScreen from "../features/community/CommunityScreen"
+import HomeScreen from "../features/home/HomeScreen"
+import { IssStack } from "./IssStack/IssStack"
+import SuggestionsScreen from "../features/suggestion/SuggestionsScreen"
 
 import { RFValue } from "react-native-responsive-fontsize"
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from "@expo/vector-icons"
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 
-
 export type AppTabsParamList = {
     WatchScreen: undefined,
     CommunityScreen: undefined,
     HomeScreen: undefined,
-    IssTrackingScreen: undefined,
+    IssStack: undefined,
     SuggestionsScreen: undefined
 }
 
@@ -66,7 +65,7 @@ export default function AppTabs() {
                     <Feather 
                        name="users"
                        size={RFValue(23)}
-                       color={focused ? "FFFFFF" : "rgba(255, 255, 255, 0.4)"}
+                       color={focused ? "#FFFFFF" : "rgba(255, 255, 255, 0.4)"}
                     />
                 )
             }}/>
@@ -88,8 +87,8 @@ export default function AppTabs() {
             }}/>
 
             <Tab.Screen 
-              name="IssTrackingScreen" 
-              component={IssTrackingScreen} 
+              name="IssStack" 
+              component={IssStack} 
               options={{
                 tabBarLabel: 'Iss',
                 tabBarIcon: ({ focused}) => (

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Image} from 
 import { RFValue } from "react-native-responsive-fontsize";
 import { BlurView } from "expo-blur";
 
-import { onGoogleButtonPress } from "../../services/GoogleAuth";
+import { onGoogleButtonPress } from "./hooks/GoogleAuth";
 
 export default function AuthScreen() {
 

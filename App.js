@@ -1,4 +1,4 @@
-import { AuthProvider } from './src/services/AuthContext';
+import { AuthProvider } from './src/shared/contexts/AuthContext';
 import RootNavigator from './src/navigation/RootNavigator';
 import { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';

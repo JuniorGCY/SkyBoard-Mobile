@@ -27,6 +27,11 @@
         "@react-native-google-signin/google-signin"
       ],
       "expo-image"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "14528016-4f7f-413d-a22d-2245a398419e"
+      }
+    }
   }
 }

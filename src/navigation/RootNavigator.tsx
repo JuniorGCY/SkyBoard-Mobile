@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { AuthContext } from '../services/AuthContext';
+import { AuthContext } from '../shared/contexts/AuthContext';
 
 import AppTabs from "./AppTabs";
 import AuthStack from "./AuthStack";
@@ -10,7 +10,6 @@ export type RootParamList = {
     AppTabs: undefined,
     AuthStack: undefined
 }
-
 
 const Stack = createNativeStackNavigator<RootParamList>()
 
