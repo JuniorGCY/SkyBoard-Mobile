@@ -8,7 +8,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { IssStackParamList } from "../../navigation/IssStack/IssStack";
+import { IssStackParamList } from "../../../navigation/IssStack/IssStack";
 
 export default function IssTrackingScreen() {
 
@@ -18,7 +18,6 @@ export default function IssTrackingScreen() {
         <SafeAreaView style={styles.container}>
 
             <View style={styles.header}>
-                <Feather name="arrow-left" size={32} color="#FFFFFF"/>
                 <Text style={styles.headerTitle}>Iss Tracking</Text>
             </View>
 

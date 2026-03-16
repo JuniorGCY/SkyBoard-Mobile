@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import IssTrackingScreen from "../../features/iss-tracking/IssTrackingScreen";
+import IssTrackingScreen from "../../features/iss-tracking/screens/IssTrackingScreen";
 import IssDetailsScreen from "../../features/iss-tracking/screens/IssDetailsScreen";
 
 export type IssStackParamList = {
