@@ -1,8 +1,7 @@
-import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView} from "react-native";
+import React, {useEffect, useState} from "react";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView, ActivityIndicator, FlatList} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -10,80 +9,86 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { IssStackParamList } from "../../../navigation/IssStack/IssStack";
 
+import { fetchAllFamousPasses } from "../services/getVisualPasses";
+
 export default function IssTrackingScreen() {
+  const navigation = useNavigation<NativeStackNavigationProp<IssStackParamList>>()
+  const [tracking, setTracking] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
 
-    const navigation = useNavigation<NativeStackNavigationProp<IssStackParamList>>()
+  useEffect(() => {
+      async function loadingSpacial() {
+          setLoading(true)
+          const dates = await fetchAllFamousPasses()
+          setTracking(dates)
+          setLoading(false)
+      }
+      loadingSpacial()
+  }, [])
 
-    return (
-        <SafeAreaView style={styles.container}>
+  const renderCard = ({ item }: { item: any }) => (
+      <TouchableOpacity onPress={() => navigation.navigate("IssDetailsScreen", { passData: item })}>
+          <View style={styles.cardContainer}>
+              <View style={{alignItems: 'flex-start'}}>
+                  <Text style={styles.mainTextCard}>{item.diaSemana}</Text>
+                  <Text style={styles.textCard}>{item.satelite}</Text>
+                  <View style={{flexDirection: 'row'}}>
+                      <Text style={[styles.textCard, {marginEnd: 10}]}>Mag: {item.magnitude}</Text>
+                      <Text style={styles.textCard}>Elev: {item.elevacao}°</Text>
+                  </View>
+              </View>
 
-            <View style={styles.header}>
-                <Text style={styles.headerTitle}>Iss Tracking</Text>
-            </View>
+              <View style={{alignItems: 'flex-end'}}>
+                  <Text style={styles.mainTextCard}>{item.dataCurta}</Text>
+                  <Text style={styles.textCard}>{item.horaInicio} - {item.horaFim}</Text>
+                  <Text style={styles.textCard}>Previsão...</Text> 
+              </View>
+          </View>
+      </TouchableOpacity>
+  );
 
-            <View style={styles.searchContainer}>
-                <View style={{flexDirection: 'column', marginBottom: RFValue(20)}}>
-                    <Text style={{color: '#fff', fontSize: RFValue(20), marginTop: RFValue(20), textAlign: 'center'}}>Busque sua localização</Text>
-                </View>
+  return (
+      <SafeAreaView style={styles.container}>
+          <View style={styles.header}>
+              <Text style={styles.headerTitle}>Iss Tracking</Text>
+          </View>
 
-                <View style={{flexDirection: 'row'}}>
-                    <TextInput
-                        inputMode="text"
-                        style={styles.textinput}
-                        placeholder="Digite sua localização"
-                        placeholderTextColor="#ccc"
-                    />
-                    <TouchableOpacity>
-                        <View style={styles.manualIconLocation}>
-                            <MaterialCommunityIcons name="map-marker" size={28} color="#fff"/>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+          <View style={styles.searchContainer}>
+              <View style={{flexDirection: 'column', marginBottom: RFValue(20)}}>
+                  <Text style={{color: '#fff', fontSize: RFValue(20), marginTop: RFValue(20), textAlign: 'center'}}>
+                    Busque sua localização
+                  </Text>
+              </View>
 
-                
-            </View>
+              <View style={{flexDirection: 'row'}}>
+                  <TextInput
+                      inputMode="text"
+                      style={styles.textinput}
+                      placeholder="Digite sua localização"
+                      placeholderTextColor="#ccc"
+                  />
+                  <TouchableOpacity onPress={() => console.log("Buscar clicado!")}>
+                      <View style={styles.manualIconLocation}>
+                          <MaterialCommunityIcons name="map-marker" size={28} color="#fff"/>
+                      </View>
+                  </TouchableOpacity>
+              </View>
+          </View>
 
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <TouchableOpacity onPress={ () => navigation.navigate("IssDetailsScreen")}>
-                    <View style={styles.cardContainer}>
-                        <View style={{alignItems: 'flex-start'}}>
-                            <Text style={styles.mainTextCard}>Segunda-Feira</Text>
-                            <Text style={styles.textCard}>ISS</Text>
-                            <View style={{flexDirection: 'row'}}>
-                                <Text style={[styles.textCard, {marginEnd: 10}]}>Mag: 1,0</Text>
-                                <Text style={styles.textCard}>Elev: 35</Text>
-                            </View>
-                        </View>
-
-                        <View style={{alignItems: 'flex-end'}}>
-                            <Text style={styles.mainTextCard}>2 de mar</Text>
-                            <Text style={styles.textCard}>20:01 - 20:03</Text>
-                            <Text style={styles.textCard}>Nublado</Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
-
-                <TouchableOpacity>
-                    <View style={styles.cardContainer}>
-                        <View style={{alignItems: 'flex-start'}}>
-                            <Text style={styles.mainTextCard}>Segunda-Feira</Text>
-                            <Text style={styles.textCard}>ISS</Text>
-                            <View style={{flexDirection: 'row'}}>
-                                <Text style={[styles.textCard, {marginEnd: 10}]}>Mag: 1,0</Text>
-                                <Text style={styles.textCard}>Elev: 35</Text>
-                            </View>
-                        </View>
-
-                        <View style={{alignItems: 'flex-end'}}>
-                            <Text style={styles.mainTextCard}>2 de mar</Text>
-                            <Text style={styles.textCard}>20:01 - 20:03</Text>
-                            <Text style={styles.textCard}>Nublado</Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
-            </ScrollView>
-        </SafeAreaView>
-    )
+          {loading ? (
+              <ActivityIndicator size="large" color="#00B37E" style={{ marginTop: 50 }} />
+          ) : (
+              <FlatList 
+                  data={tracking}
+                  keyExtractor={(item) => item.id}
+                  renderItem={renderCard}
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={{ paddingBottom: 20, width: '100%' }}
+              />
+          )}
+          
+      </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({

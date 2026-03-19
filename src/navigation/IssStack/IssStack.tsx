@@ -4,7 +4,9 @@ import IssDetailsScreen from "../../features/iss-tracking/screens/IssDetailsScre
 
 export type IssStackParamList = {
     IssTrackingScreen: undefined,
-    IssDetailsScreen: undefined
+    IssDetailsScreen: {
+        passData: any
+    }
 }
 
 const Stack = createNativeStackNavigator<IssStackParamList>()
