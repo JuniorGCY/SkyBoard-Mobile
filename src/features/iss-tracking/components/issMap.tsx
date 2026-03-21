@@ -32,12 +32,14 @@ export default function IssMap({mapProps}: MapProps) {
                 <MapView
                   provider={PROVIDER_GOOGLE}
                   style={{flex: 1, borderRadius: 10}}
-                   mapType="hybrid"
-                   region={{
-                     latitude: parseFloat(mapProps.lat),
-                     longitude: parseFloat(mapProps.lng),
-                     latitudeDelta: 60,
-                     longitudeDelta: 60
+                  mapType="hybrid"
+                  zoomEnabled={true}
+                  scrollEnabled={true}
+                  initialRegion={{
+                    latitude: parseFloat(mapProps.lat),
+                    longitude: parseFloat(mapProps.lng),
+                    latitudeDelta: 60,
+                    longitudeDelta: 60
                    }}
                 >
                     <Marker 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView, ActivityIndicator, FlatList} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, ActivityIndicator, FlatList} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -11,10 +11,19 @@ import { IssStackParamList } from "../../../navigation/IssStack/IssStack";
 
 import { fetchAllFamousPasses } from "../services/getVisualPasses";
 
+//buscar Localização por Hooks
+import { catchLocationGPS } from "../hooks/catchLocationGPS";
+import { catchLocationCity } from "../hooks/catchLocationCity";
+import { useLocationStore } from "../store/useLocationStore";
+
 export default function IssTrackingScreen() {
+  const latitudeStore = useLocationStore((state) => state.latitude)
+  const longitudeStore = useLocationStore((state) => state.longitude)
   const navigation = useNavigation<NativeStackNavigationProp<IssStackParamList>>()
+
   const [tracking, setTracking] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const [userCity, setUserCity] = useState('')
 
   useEffect(() => {
       async function loadingSpacial() {
@@ -24,7 +33,7 @@ export default function IssTrackingScreen() {
           setLoading(false)
       }
       loadingSpacial()
-  }, [])
+  }, [latitudeStore,longitudeStore])
 
   const renderCard = ({ item }: { item: any }) => (
       <TouchableOpacity onPress={() => navigation.navigate("IssDetailsScreen", { passData: item })}>
@@ -65,9 +74,17 @@ export default function IssTrackingScreen() {
                       inputMode="text"
                       style={styles.textinput}
                       placeholder="Digite sua localização"
+                      value={userCity}
+                      onChangeText={setUserCity}
                       placeholderTextColor="#ccc"
+                      onSubmitEditing={() => catchLocationCity(userCity)}
                   />
-                  <TouchableOpacity onPress={() => console.log("Buscar clicado!")}>
+                  {userCity.length > 0 && (
+                          <TouchableOpacity onPress={() => setUserCity('')} style={{ padding: 5 }}>
+                              <MaterialCommunityIcons name="close-circle" size={20} color="#ccc" />
+                          </TouchableOpacity>
+                      )}
+                  <TouchableOpacity onPress={() => catchLocationGPS()}>
                       <View style={styles.manualIconLocation}>
                           <MaterialCommunityIcons name="map-marker" size={28} color="#fff"/>
                       </View>
@@ -86,7 +103,6 @@ export default function IssTrackingScreen() {
                   contentContainerStyle={{ paddingBottom: 20, width: '100%' }}
               />
           )}
-          
       </SafeAreaView>
   )
 }
