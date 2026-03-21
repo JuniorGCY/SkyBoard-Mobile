@@ -28,7 +28,13 @@
       ],
       "expo-image",
       "expo-build-properties",
-      "@morrowdigital/watermelondb-expo-plugin"
+      [
+        "react-native-maps",
+        {
+          "androidGoogleMapsApiKey": "process.env.EXPO_PUBLIC_GOOGLE_MAPS_KEY",
+          "iosGoogleMapsApiKey": "process.env.EXPO_PUBLIC_GOOGLE_MAPS_KEY"
+        }
+      ]
     ],
     "extra": {
       "eas": {

@@ -1,3 +1,5 @@
+import { useLocationStore } from "../store/useLocationStore";
+
 export async function fetchAllFamousPasses() {
     try {
         const FAMOUS_SATELLITES = [
@@ -5,10 +7,10 @@ export async function fetchAllFamousPasses() {
             { id: 48274, name: 'Tiangong (Estação Chinesa)' },
             { id: 20580, name: 'Telescópio Hubble' }
         ];
-        const userLat = -8.3916; 
-        const userLng = -47.7677; 
+        const userLat = useLocationStore.getState().latitude
+        const userLng = useLocationStore.getState().longitude 
         const userAlt = 0; 
-        const days = 10; 
+        const days = 5; 
         const minElevation = 10; 
         const apiKey = process.env.EXPO_PUBLIC_N2YO_API_KEY;
 

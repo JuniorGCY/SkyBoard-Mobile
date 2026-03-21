@@ -5,6 +5,8 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from "react-native-responsive-fontsize";
 
+import IssMap from "../components/issMap";
+import TelemetryCard from "../components/TelemetryCard";
 import * as satellite from 'satellite.js';
 
 export default function IssDetailsScreen() {
@@ -110,22 +112,11 @@ export default function IssDetailsScreen() {
             </View>
 
             <View style={styles.issMap}>
-                
+                <IssMap mapProps={liveData}/>
             </View>
 
             <View style={styles.cardDetails2}>
-                {calcError ? (
-                    <Text style={[styles.cardTexts, { color: 'red' }]}>Erro de Telemetria</Text>
-                ) : liveData.lat === '---' ? (
-                    <ActivityIndicator size="small" color="#00B37E" />
-                ) : (
-                    <>
-                        <Text style={styles.cardTexts}>Latitude {"\n"} {liveData.lat}</Text>
-                        <Text style={styles.cardTexts}>Longitude {"\n"} {liveData.lng}</Text>
-                        <Text style={styles.cardTexts}>Altitude {"\n"} {liveData.alt} km</Text>
-                        <Text style={styles.cardTexts}>Elevação {"\n"} ---</Text>
-                    </>
-                )}
+                <TelemetryCard dateProps={liveData}/>
             </View>
             
         </SafeAreaView>
