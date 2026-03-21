@@ -2,7 +2,7 @@
   "expo": {
     "name": "SkyBoard",
     "slug": "SkyBoard",
-    "version": "1.0.0",
+    "version": "0.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -14,11 +14,13 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yashimayu.SkyBoard",
-      "googleServicesFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "buildNumber": "2"
     },
     "android": {
       "package": "com.yashimayu.SkyBoard",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 2
     },
     "plugins": [
       "@react-native-firebase/app",
