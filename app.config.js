@@ -1,0 +1,50 @@
+export default {
+  expo: {
+    name: "SkyBoard",
+    slug: "SkyBoard",
+    version: "0.2.0",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "automatic",
+    splash: {
+      image: "./assets/splash-icon.png",
+      resizeMode: "contain",
+      backgroundColor: "#0B0E14"
+    },
+    ios: {
+      supportsTablet: true,
+      bundleIdentifier: "com.yashimayu.SkyBoard",
+      googleServicesFile: "./GoogleService-Info.plist",
+      buildNumber: "2"
+    },
+    android: {
+      package: "com.yashimayu.SkyBoard",
+      googleServicesFile: "./google-services.json",
+      versionCode: 2,
+      config: {
+        googleMaps: {
+          apiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY
+        }
+      }
+    },
+    plugins: [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      ["@react-native-google-signin/google-signin"],
+      "expo-image",
+      "expo-build-properties",
+      [
+        "react-native-maps",
+        {
+          androidGoogleMapsApiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY,
+          iosGoogleMapsApiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY
+        }
+      ]
+    ],
+    extra: {
+      eas: {
+        projectId: "14528016-4f7f-413d-a22d-2245a398419e"
+      }
+    }
+  }
+};
