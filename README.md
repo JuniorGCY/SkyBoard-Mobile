@@ -1,7 +1,8 @@
-# 🌌 SkyBoard
+# SkyBoard
 
 pt:
-**SkyBoard** é um aplicativo mobile em desenvolvimento para amantes da astronomia e astrofotografia. O objetivo é fornecer ferramentas precisas para observação do céu, monitoramento de eventos astronômicos e gerenciamento de sessões de captura.
+
+**SkyBoard** é um aplicativo mobile em desenvolvimento por mim para amantes da astronomia e astrofotografia. O objetivo é fornecer ferramentas precisas para observação do céu, monitoramento de eventos astronômicos e gerenciamento de sessões de captura.
 
 Objetivo:
 O SkyBoard nasceu de uma necessidade pessoal: a frustração de ter que usar múltiplos aplicativos para cobrir todas as necessidades de um astrônomo amador. Desenvolvi este projeto para ser o hub definitivo para entusiastas do espaço. Com ele, você não precisa mais pular de app em app. O SkyBoard centraliza:
@@ -14,7 +15,7 @@ O SkyBoard nasceu de uma necessidade pessoal: a frustração de ter que usar mú
 
 **Guia de Equipamentos**: Recomendações e curadoria das melhores marcas de telescópios em lojas confiáveis.
 
-## 🚀 Funcionalidades Planejadas
+## Funcionalidades Planejadas
 1\. **Dashboard de Eventos**: Calendário dinâmico com notificações de eclipses, conjunções e chuvas de meteoros.
 
 2\. **Rastreador de Astros e ISS**: Mapa em tempo real da Estação Espacial e coordenadas (Azimute/Altitude) de planetas. (N2YO API)
@@ -27,21 +28,22 @@ O SkyBoard nasceu de uma necessidade pessoal: a frustração de ter que usar mú
 
 6\. **IA Astro-Grader (Futuro)**: Sistema de análise de fotos para dar notas e dicas de melhoria.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - [React Native](https://reactnative.dev/) - Framework para apps nativos.
 - [Expo](https://expo.dev/) - Plataforma de desenvolvimento e build.
 - [Firebase](https://firebase.google.com/) - Autenticação e infraestrutura de backend.
 - [TypeScript](https://www.typescriptlang.org/) - Tipagem estática para maior segurança do código.
+- [Zustand](https://zustand.site/en/) - Zustand.
 - [React Navigation](https://reactnavigation.org/) - Roteamento e navegação.
 
-## 📦 Instalação e Execução
+## Instalação e Execução
 
 Para rodar o projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/JuniorGCY/SkyBoard-Mobile.git](https://github.com/JuniorGCY/SkyBoard-Mobile.git)
+   git clone https://github.com/JuniorGCY/SkyBoard-Mobile.git
 
 2. **Instale as dependências:**
    npm install
@@ -53,7 +55,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
    Pressione a para Android ou i para iOS.
 
 
-## 🗺️ Planejamento e Design
+## Planejamento e Design
 
 Para acompanhar a evolução do SkyBoard e entender o processo criativo, você pode acessar:
 
@@ -74,7 +76,7 @@ Para acompanhar a evolução do SkyBoard e entender o processo criativo, você p
   <img src="./assets/home2.png" alt="Print da tela home no emulador tela grande" width="100%">
 </details>
 
-🗺️ Roadmap de Desenvolvimento
+## Roadmap de Desenvolvimento
 
 **Fase 1**: MVP Útil
 
@@ -102,7 +104,7 @@ Para acompanhar a evolução do SkyBoard e entender o processo criativo, você p
 **Meta**: Ajudar o usuário quais as melhores condições de observação e ajudar na escolha do Telescópio.
 
 
-🛡️ Direitos Autorais
+## Direitos Autorais
 Este projeto é de uso pessoal e faz parte do meu portfólio de desenvolvimento mobile.
 Todos os direitos reservados. A visualização do código é permitida para fins de aprendizado e avaliação técnica, mas a reprodução, modificação ou redistribuição de partes ou do todo não está autorizada sem permissão prévia.
 
@@ -111,7 +113,8 @@ Beta em breve!
 
 
 
-EN:
+## EN:
+
 **SkyBoard** It is a mobile application under development for astronomy and astrophotography enthusiasts. The goal is to provide precise tools for observing the sky, monitoring astronomical events, and managing capture sessions.
 
 Objective:
@@ -127,7 +130,7 @@ SkyBoard was born out of a personal need: the frustration of having to use multi
 **Equipment Guide**: Recommendations and curation of the best telescope brands in reliable stores.
 
 
-## 🚀 Planned Features
+## Planned Features
 
 1. **Events Dashboard**: Dynamic calendar with notifications for eclipses, conjunctions, and meteor showers.
 
@@ -151,16 +154,18 @@ SkyBoard was born out of a personal need: the frustration of having to use multi
 
 - [TypeScript](https://www.typescriptlang.org/) - Static typing for greater code security.
 
+- [Zustand](https://zustand.site/en/) - Zustand.
+
 - [React Navigation](https://reactnavigation.org/) - Routing and navigation.
 
-## 📦 Installation and Execution
+## Installation and Execution
 
 To run the project locally, follow the steps below:
 
 1. **Clone the repository:**
 
 
-git clone [https://github.com/JuniorGCY/SkyBoard-Mobile.git](https://github.com/JuniorGCY/SkyBoard-Mobile.git)
+git clone https://github.com/JuniorGCY/SkyBoard-Mobile.git
 
 2. **Install the dependencies:**
 
@@ -175,7 +180,7 @@ npx expo start
 Press a for Android or i for iOS.
 
 
-## 🗺️ Planning and Design
+## Planning and Design
 
 To follow the evolution of SkyBoard and understand the creative process, you can access:
 
@@ -197,7 +202,7 @@ To follow the evolution of SkyBoard and understand the creative process, you can
 </details>
 
 
-🗺️ Development Roadmap
+Development Roadmap
 
 **Phase 1**: Useful MVP
 
@@ -227,7 +232,7 @@ To follow the evolution of SkyBoard and understand the creative process, you can
 
 
 
-🛡️ Copyright Notice
+## Copyright Notice
 This project is for personal use and is part of my mobile development portfolio.
 
 All rights reserved. Viewing the code is permitted for learning and technical evaluation purposes, but reproduction, modification, or redistribution of parts or the whole is not authorized without prior permission.
